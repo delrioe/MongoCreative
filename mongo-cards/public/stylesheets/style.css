@@ -6,3 +6,152 @@ body {
 a {
   color: #00B7FF;
 }
+
+
+
+@import url('https://fonts.googleapis.com/css?family=ABeeZee');
+.Title {
+    border-radius: 10px;
+    background-color: #b3d1b9;
+    padding: 5px;
+    overflow: auto;
+    text-align: center;
+}
+
+lo {
+    padding: 10px;
+}
+
+body {
+    font-family: ABeeZee;
+    background-color: #184f21;
+}
+
+.User-list {
+    list-style: none;
+}
+
+.AvatarBorder {
+    border: 5px solid transparent;
+}
+
+.Avatar {
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: #c1c0bf;
+    padding: 5px;
+    overflow: auto;
+    width: 275px;
+    height: 425px;
+    float: left;
+    margin: 10px;
+}
+
+
+.Avatar img {
+    width: 96.5%;
+    height: 50%;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.Avatar #img_element {
+    position: relative;
+    float: right;
+    width: 20px;
+    height: 20px;
+}
+.Avatar #img_level {
+    position: relative;
+    width: 10px;
+    height: 10px;
+}
+
+.Avatar #description_box{
+    width:100%;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+.Avatar #rare_status{
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    
+}
+
+.Avatar h2 {
+    text-transform: capitalize;
+    color: black;
+    margin: 0;
+    padding: 5px;
+}
+
+.Avatar p {
+    margin: 0;
+    padding: 3px;
+    font-size: 14px;
+}
+
+
+.row {
+    display: flex;
+}
+
+
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #58aa67;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #36683f;
+}
+
+
+.formatoLeft {
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 49%;
+
+}
+
+.serparation {
+    width: 1%
+}
+
+.formatoRight {
+    margin: auto;
+}
+
+#game {
+    overflow: auto;
+    margin: auto;
+    max-width: 750px;
+    border-width: 20px;
+    border-color: #555555;
+    border-style: solid;
+}
+
+.descriptInput{
+    height: 100px;
+}
