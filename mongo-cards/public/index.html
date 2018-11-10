@@ -18,31 +18,34 @@
 
     <form id="commentForm" action="">
         <div class="form-group">
-        <label for="name" style="font-weight: bold; font-size: 2em">Card Name: </label><input class="form-control" type="text" id="name" placeholder="Name">
+            <label for="name" style="font-weight: bold; font-size: 2em">Card Name: </label><input class="form-control" type="text" id="name" placeholder="Name">
         </div>
         <div class="form-group">
-        <label for="picture" style="font-weight: bold; font-size: 2em">Picture URL: </label><input class="form-control" type="text" id="picture" placeholder="URL">
+            <label for="picture" style="font-weight: bold; font-size: 2em">Picture URL: </label><input class="form-control" type="text" id="picture" placeholder="URL">
         </div>
         <div class="form-group">
-        <label for="description" style="font-weight: bold; font-size: 2em">Description: </label><input class="form-control" type="text" id="description" placeholder="Description">
+            <label for="description" style="font-weight: bold; font-size: 2em">Description: </label><input class="form-control" type="text" id="description" placeholder="Description">
+        </div>
+        <select id="mymenu" size="1">
+            <option value="fire" selected="selected">Fire</option>
+            <option value="earth">Earth</option>
+            <option value="water">Water</option>
+            <option value="http://www.cssdrive.com">Wind</option>
+        </select>
+        <div class="form-group">
+            <label for="attack" style="font-weight: bold; font-size: 2em">Attack: </label><input class="form-control" type="text" id="attack" placeholder="Attack">
         </div>
         <div class="form-group">
-        <label for="element" style="font-weight: bold; font-size: 2em">Element: </label><input class="form-control" type="text" id="element" placeholder="Element">
+            <label for="defense" style="font-weight: bold; font-size: 2em">Defense: </label><input class="form-control" type="text" id="defense" placeholder="Defense">
         </div>
         <div class="form-group">
-        <label for="attack" style="font-weight: bold; font-size: 2em">Attack: </label><input class="form-control" type="text" id="attack" placeholder="Attack">
-        </div>
-        <div class="form-group">
-        <label for="defense" style="font-weight: bold; font-size: 2em">Defense: </label><input class="form-control" type="text" id="defense" placeholder="Defense">
-        </div>
-         <div class="form-group">
-        <label for="query" style="font-weight: bold; font-size: 2em">Card Lookup (Optional): </label><input class="form-control" type="text" id="query" placeholder="Card Lookup">
+            <label for="query" style="font-weight: bold; font-size: 2em">Card Lookup (Optional): </label><input class="form-control" type="text" id="query" placeholder="Card Lookup">
         </div>
     </form>
     <button id="postCard" class="btn btn-default">Create Card</button>
     <button id="getCards" class="btn btn-default">Get Cards</button>
     <div id="cards"></div>
-    
+
 </body>
 
 </html>
