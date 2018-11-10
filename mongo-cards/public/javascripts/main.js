@@ -16,6 +16,7 @@ $(document).ready(function() {
     })
   });
   /*
+  staehu9tor0r,9299393939ooo
   $("#deleteComments").click(function() {
     $.ajax({
       url: 'comment',
@@ -32,13 +33,14 @@ $("#getCards").click(function() {
   var url = 'card?q=' + $('#query').val();
     $.getJSON(url, function(data) {
       console.log(data);
-      var everything = "<ul>";
+     // var everything = "<ul>";
       var everything ="";
       for (var card in data) {
         var car = data[card];
-        everything += "<li> Name: " + com.Name + " -- URL: " + com.URL + "Description: " + com.Description + "Element: " + com.Element + "Attack: " + com.Attack + "Defense: " + com.Defense + "</li>";
+        everything += "<div class=\"Avatar\">" + "<h2>" + car.Name + "</h2>" + "<img src=\"" + car.URL + "\"" + 
+            "</img>" + "<p>" + car.Description + "</p>" + "Element: " + car.Element + "Attack: " + car.Attack + "Defense: " + car.Defense + "</div>";
       }
-      everything += "</ul>";
+      //everything += "</ul>";
       $("#cards").html(everything);
     })
   });
