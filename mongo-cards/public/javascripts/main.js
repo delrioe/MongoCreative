@@ -1,27 +1,40 @@
 $(document).ready(function() {
     $("#postCard").click(function() {
-        //var elementTest = $("#element").val();
-        var e = document.getElementById("element");
-        var elementTest = e.options[e.selectedIndex].value;
-        console.log(elementTest);
+        var elementTest = $("#element").val();
         var cardBackground = "";
         var elementURL = "";
-
-        switch ($("#element").val()) {
+        if ($("#element").val() === "default") {
+            var x = Math.floor((Math.random() * 4) + 1);
+            switch (x) {
+                case 1:
+                    elementTest = "fire";
+                    break;
+                case 2:
+                    elementTest = "water";
+                    break;
+                case 3:
+                    elementTest = "wind";
+                    break;
+                case 4:
+                    elementTest = "earth";
+                    break;
+            }
+        }
+        switch (elementTest) {
             case "fire":
-                cardBackground = "#ba6b66";
+                cardBackground = "images/fireBackground.jpeg";
                 elementURL = "images/Fire.png";
                 break;
             case "earth":
-                cardBackground = "#da8550";
+                cardBackground = "images/earthBackground.jpeg";
                 elementURL = "images/Earth.png";
                 break;
             case "water":
-                cardBackground = "#6196ed";
+                cardBackground = "images/waterBackground.jpeg";
                 elementURL = "images/Water.png";
                 break;
             case "wind":
-                cardBackground = "#c1c0bf";
+                cardBackground = "images/windBackground.jpeg";
                 elementURL = "images/Wind.png";
                 break;
         }
@@ -64,7 +77,7 @@ $(document).ready(function() {
                 var car = data[card];
                 console.log(card.Color);
 
-                everything += "<div class=\"Avatar\" style=\"background-color:" + car.Color + "\">" + "<img id=\"img_element\" src=\"" + 
+                everything += "<div class=\"Avatar\" style=\"background-image: url(" + car.Color + ")\">" + "<img id=\"img_element\" src=\"" + 
                     car.Element + "\">" + "<h2>" + car.Name + "</h2>" + "<img src=\"" + car.URL + "\"" + "</img>" + 
                     "<div id=\"description_box\"" + "<p>" + car.Description + "</p>" + "</div>" + "<br>" + "<p>" + "Attack: " + car.Attack + "Defense: " + car.Defense + "</p>" + "</div>";
             }
