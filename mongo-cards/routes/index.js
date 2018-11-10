@@ -20,14 +20,18 @@ db.getCollection("comments").find()
 /* Set up mongoose in order to connect to mongo database */
 var mongoose = require('mongoose'); //Adds mongoose as a usable dependency
 
-mongoose.connect('mongodb://localhost/commentDB', { useNewUrlParser: true }); //Connects to a mongo database called "commentDB"
+mongoose.connect('mongodb://localhost/cardDB', { useNewUrlParser: true }); //Connects to a mongo database called "commentDB"
 
-var commentSchema = mongoose.Schema({ //Defines the Schema for this database
+var cardSchema = mongoose.Schema({ //Defines the Schema for this database
     Name: String,
-    Comment: String
+    URL: String,
+    Description: String,
+    Element: String,
+    Attack: String,
+    Defense: String
 });
 
-var Comment = mongoose.model('Comment', commentSchema); //Makes an object from that schema as a model
+var Comment = mongoose.model('Card', cardSchema); //Makes an object from that schema as a model
 
 var db = mongoose.connection; //Saves the connection as a variable to use
 db.on('error', console.error.bind(console, 'connection error:')); //Checks for connection errors
@@ -35,8 +39,8 @@ db.once('open', function() { //Lets us know when we're connected
     console.log('Connected');
 });
 
-/* GET comments from database */
-router.get('/comment', function(req, res, next) {
+/* GET cards from database */
+router.get('/card', function(req, res, next) {
     console.log("In the GET route?");
     console.log(req.query);
     var name = req.query["q"];
@@ -53,14 +57,15 @@ router.get('/comment', function(req, res, next) {
         }
     })
 });
-
+/*
 router.delete('/comment', function(req, res, next) {
     console.log("In Delete");
     Comment.collection.remove();
 });
-
-router.post('/comment', function(req, res, next) {
-    console.log("POST comment route");
+*/
+/* POST a card into the database */
+router.post('/card', function(req, res, next) {
+    console.log("POST card route");
     console.log(req.body);
     var newcomment = new Comment(req.body);
     console.log(newcomment);

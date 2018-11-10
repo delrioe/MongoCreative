@@ -1,6 +1,7 @@
 $(document).ready(function() {
-  $("#postComment").click(function() {
-    var myobj = { Name: $("#name").val(), Comment: $("#comment").val() };
+  $("#postCard").click(function() {
+    var myobj = { Name: $("#name").val(), URL: $("#picture").val(), Description: $("#description").val(), Element: $("#element").val(), Attack: $("#attack").val(), Defense: $("#defense").val() };
+    
     jobj = JSON.stringify(myobj);
     $("#json").html(jobj);
     var url = "comment";
@@ -14,7 +15,7 @@ $(document).ready(function() {
       }
     })
   });
-  
+  /*
   $("#deleteComments").click(function() {
     $.ajax({
       url: 'comment',
@@ -42,4 +43,6 @@ $("#getComments").click(function() {
       $("#comments").html(everything);
     })
   });
+  */
+  
 });
