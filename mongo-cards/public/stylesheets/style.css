@@ -1,10 +1,15 @@
 body {
+    background-image: url("/images/Background.jpeg");
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.form-group {
+    color: white
 }
 
 .Title {
@@ -56,8 +61,8 @@ body {
 .Avatar #img_element {
     position: relative;
     float: right;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
 }
 .Avatar #img_level {
     position: relative;
