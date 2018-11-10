@@ -4,7 +4,7 @@ $(document).ready(function() {
     
     jobj = JSON.stringify(myobj);
     $("#json").html(jobj);
-    var url = "comment";
+    var url = "card";
     $.ajax({
       url: url,
       type: "POST",
@@ -27,22 +27,21 @@ $(document).ready(function() {
     //get rid of everything in the comments div too
     $("#comments").html("");
   });
-
-$("#getComments").click(function() {
-  var url = 'comment?q=' + $('#query').val();
+*/
+$("#getCards").click(function() {
+  var url = 'card?q=' + $('#query').val();
     $.getJSON(url, function(data) {
       console.log(data);
-      //var everything = "<ul>";
+      var everything = "<ul>";
       var everything ="";
-      for (var comment in data) {
-        com = data[comment];
-        //everything += "<li> Name: " + com.Name + " -- Comment: " + com.Comment + "</li>";
-        everything += "<div class=\"card bg-dark text-white\"> <div class=\"card-body\"> Name: " + com.Name + " -- Comment: " + com.Comment + "</div> </div>";
+      for (var card in data) {
+        var car = data[card];
+        everything += "<li> Name: " + com.Name + " -- URL: " + com.URL + "Description: " + com.Description + "Element: " + com.Element + "Attack: " + com.Attack + "Defense: " + com.Defense + "</li>";
       }
-      everything += "<br>";
-      $("#comments").html(everything);
+      everything += "</ul>";
+      $("#cards").html(everything);
     })
   });
-  */
+
   
 });

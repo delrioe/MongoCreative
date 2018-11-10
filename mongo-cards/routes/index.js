@@ -31,7 +31,7 @@ var cardSchema = mongoose.Schema({ //Defines the Schema for this database
     Defense: String
 });
 
-var Comment = mongoose.model('Card', cardSchema); //Makes an object from that schema as a model
+var Card = mongoose.model('Card', cardSchema); //Makes an object from that schema as a model
 
 var db = mongoose.connection; //Saves the connection as a variable to use
 db.on('error', console.error.bind(console, 'connection error:')); //Checks for connection errors
@@ -49,7 +49,7 @@ router.get('/card', function(req, res, next) {
     if (name) {
         obj = {Name:name};
     }
-    Comment.find(obj, function(err, commentList) { //Calls the find() method on your database
+    Card.find(obj, function(err, commentList) { //Calls the find() method on your database
         if (err) return console.error(err); //If there's an error, print it out
         else {
             console.log(commentList); //Otherwise console log the comments you found
@@ -67,9 +67,9 @@ router.delete('/comment', function(req, res, next) {
 router.post('/card', function(req, res, next) {
     console.log("POST card route");
     console.log(req.body);
-    var newcomment = new Comment(req.body);
-    console.log(newcomment);
-    newcomment.save(function(err, post) {
+    var newCard = new Card(req.body);
+    console.log(newCard);
+    newCard.save(function(err, post) {
         if (err) return console.error(err);
         console.log(post);
         res.sendStatus(200);
