@@ -26,11 +26,12 @@
         <div class="form-group">
             <label for="description" style="font-weight: bold; font-size: 2em">Description: </label><input class="form-control" type="text" id="description" placeholder="Description">
         </div>
-        <select id="mymenu" size="1">
-            <option value="fire" selected="selected">Fire</option>
+        <select id="element" size="1">
+            <option value="default" selected="selected">Default</option>
+            <option value="fire">Fire</option>
             <option value="earth">Earth</option>
             <option value="water">Water</option>
-            <option value="http://www.cssdrive.com">Wind</option>
+            <option value="wind">Wind</option>
         </select>
         <div class="form-group">
             <label for="attack" style="font-weight: bold; font-size: 2em">Attack: </label><input class="form-control" type="text" id="attack" placeholder="Attack">
@@ -44,6 +45,7 @@
     </form>
     <button id="postCard" class="btn btn-default">Create Card</button>
     <button id="getCards" class="btn btn-default">Get Cards</button>
+    <button id="deleteCards" class="btn btn-default">Delete Cards</button>
     <div id="cards"></div>
 
 </body>

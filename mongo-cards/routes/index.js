@@ -28,7 +28,8 @@ var cardSchema = mongoose.Schema({ //Defines the Schema for this database
     Description: String,
     Element: String,
     Attack: String,
-    Defense: String
+    Defense: String,
+    Color: String
 });
 
 var Card = mongoose.model('Card', cardSchema); //Makes an object from that schema as a model
@@ -57,12 +58,12 @@ router.get('/card', function(req, res, next) {
         }
     })
 });
-/*
-router.delete('/comment', function(req, res, next) {
+
+router.delete('/card', function(req, res, next) {
     console.log("In Delete");
-    Comment.collection.remove();
+    Card.collection.remove();
 });
-*/
+
 /* POST a card into the database */
 router.post('/card', function(req, res, next) {
     console.log("POST card route");
