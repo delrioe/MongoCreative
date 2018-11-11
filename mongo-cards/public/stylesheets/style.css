@@ -1,11 +1,12 @@
 body {
     background-image: url("/images/Background.jpeg");
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-attachment: fixed;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
 }
 
 .form-group {
@@ -64,28 +65,30 @@ body {
     width: 40px;
     height: 40px;
 }
+
 .Avatar #img_level {
     position: relative;
     width: 10px;
     height: 10px;
 }
 
-.Avatar #description_box{
-    width:100%;
+.Avatar #description_box {
+    width: 100%;
     background-color: #ffffff;
     border-radius: 5px;
 }
-.Avatar #rare_status{
+
+.Avatar #rare_status {
     display: block;
     margin-top: 1em;
     margin-bottom: 1em;
 
-    
+
 }
 
 .Avatar h2 {
     text-transform: capitalize;
-    color: black;
+    color: white;
     margin: 0;
     padding: 5px;
 }
@@ -154,6 +157,37 @@ input[type=submit]:hover {
     border-style: solid;
 }
 
-.descriptInput{
+.descriptInput {
     height: 100px;
+}
+
+.attack {
+    background-color: #a5534d;
+    float: left;
+    width: 50%;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    border: solid;
+    border-color: black;
+    color: white;
+
+}
+
+.defense {
+    background-color: #707070;
+    float: left;
+    width: 50%;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    border: solid;
+    border-color: black;
+    color: white;
+}
+
+.row {
+    content: "";
+    display: table;
+    clear: both;
 }
