@@ -93,7 +93,8 @@ $(document).ready(function() {
                 everything += "<div class=\"Avatar\" style=\"background-image: url(" + car.Color + ")\">" + "<img id=\"img_element\" src=\"" + 
                     car.Element + "\">" + "<h2>" + car.Name + "</h2>" + "<img src=\"" + car.URL + "\"" + "</img>" + 
                     "<div id=\"description_box\"" + "<p>" + car.Description + "</p>" + "</div>" + "<br>" + "<div class=\"attack\">"+
-                    "Attack: " + car.Attack +"</div>" + "<div class=\"defense\">" + "Defense: " + car.Defense + "</div>"+ "</div>";
+                    "<img style=\"width: 30px; height: 30px\; float: left\" src=\"images/attackIcon.png\">" + car.Attack +"</div>" + 
+                    "<div class=\"defense\">" + "<img style=\"width: 30px; height: 30px\; float: left\" src=\"images/defenseIcon.png\">" + car.Defense + "</div>"+ "</div>";
             }
             //everything += "</ul>";
             $("#cards").html(everything);
