@@ -181,6 +181,7 @@ input[type=submit]:hover {
     border-radius: 10px;
     padding: 5px;
     text-align: center;
+    line-height: center;
     border: solid;
     border-color: black;
     color: white;
