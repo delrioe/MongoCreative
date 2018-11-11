@@ -1,5 +1,10 @@
 $(document).ready(function() {
     $("#postCard").click(function() {
+        var givenURL = $("#picture").val();
+        console.log(givenURL);
+        if (givenURL === "") {
+            givenURL = "images/questionMark.jpeg";
+        }
         var elementTest = $("#element").val();
         var cardBackground = "";
         var elementURL = "";
@@ -39,7 +44,7 @@ $(document).ready(function() {
                 break;
         }
         console.log(cardBackground + "------" + elementURL);
-        var myobj = { Name: $("#name").val(), URL: $("#picture").val(), Description: $("#description").val(), Element: elementURL, Attack: $("#attack").val(), Defense: $("#defense").val(), Color: cardBackground };
+        var myobj = { Name: $("#name").val(), URL: givenURL, Description: $("#description").val(), Element: elementURL, Attack: $("#attack").val(), Defense: $("#defense").val(), Color: cardBackground };
 
         jobj = JSON.stringify(myobj);
         $("#json").html(jobj);
@@ -79,7 +84,8 @@ $(document).ready(function() {
 
                 everything += "<div class=\"Avatar\" style=\"background-image: url(" + car.Color + ")\">" + "<img id=\"img_element\" src=\"" + 
                     car.Element + "\">" + "<h2>" + car.Name + "</h2>" + "<img src=\"" + car.URL + "\"" + "</img>" + 
-                    "<div id=\"description_box\"" + "<p>" + car.Description + "</p>" + "</div>" + "<br>" + "<p>" + "Attack: " + car.Attack + "Defense: " + car.Defense + "</p>" + "</div>";
+                    "<div id=\"description_box\"" + "<p>" + car.Description + "</p>" + "</div>" + "<br>" + "<p>" + 
+                    "Attack: " + car.Attack + "Defense: " + car.Defense + "</p>" + "</div>";
             }
             //everything += "</ul>";
             $("#cards").html(everything);
